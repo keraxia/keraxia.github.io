@@ -1,0 +1,251 @@
+<!DOCTYPE html>  
+<html lang="zh">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>My portfolio</title>  
+    <style>
+        body{
+            background-color: #fdf4ff;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+        .profile-container{
+            flex: 1;
+            overflow: hidden;
+            display: flex;  
+            justify-content: right; 
+            align-items: center;
+            font-family: "cormo";
+        }
+        .profile{
+            width:85%;
+            height:auto;
+            background-color: #ffffff;
+            text-align: center;
+            height: 100vh;
+        }
+        .project-container{
+            flex: 3;
+            overflow-y: scroll;
+            display: flex;
+            justify-content: center; 
+        }
+        .projects{
+            width:90%;
+        }
+        .project{
+            background-color: #ffffff;
+            display: flex;
+            transition: transform 0.5s ease;
+            margin-bottom: 15px;
+        }
+        .left-box{
+            flex: 1;
+            justify-content: center;
+            text-align: center;
+            margin-right: 20px;
+        }
+        .right-box{
+            flex: 2;
+            margin:0 0 0 0;
+            padding-right: 5px;
+        }
+        .project-img{
+            display:flex;
+            width:100%;
+            height: auto;  
+            margin:5px;
+            margin: 0 auto;
+        }
+        .project:hover{
+            transform: scale(1.05);
+        }
+        .profile-img{
+            margin-top: 30px;
+            width:60%;
+            border-radius:50%;   
+        }
+        .project-video{
+            display:flex;
+            width:100%;
+        }
+        .education{
+            margin:0 auto;
+            width:85%;
+            font-size: 16px;
+        }
+        .weblist{
+            margin:30px auto;
+            width:85%;
+            line-height: 2;
+            text-align: left;
+            font-size: 18px;
+        }
+        .project-name{
+            font-family: "noto";
+            font-weight:500;
+            font-size: 16px;
+            margin-bottom: -10px;
+        }
+        .project-name-en{
+            font-family: "cormo";
+            font-weight:700;
+            font-size: 16px;
+        }
+        .infos{
+            font-family:"noto";
+            font-weight: 200;
+            font-size: 13px;
+        }
+        .tag{
+            background-color: #a7abff;
+            font-family:"noto";
+            font-weight: 400;
+            font-size: 12px;
+            border-radius: 10px;
+            padding: 0 5px;
+            color:#ffffff
+        }
+        .listname{
+            transition: transform 0.5s ease;
+        }
+        .listname:hover{
+            color:darkgrey;
+        }
+        a{  
+            color:#000000; /* 链接颜色 */  
+            text-decoration: none; /* 移除下划线 */  
+        }  
+        @font-face {
+            font-family: 'cormo';
+            src: url('./fonts/CormorantInfant-Light.ttf')
+        }
+        @font-face {
+            font-family: 'noto';
+            src: url('./fonts/NotoSerifSC-VariableFont_wght.ttf')
+        }
+    </style> 
+</head>  
+<body>  
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile">
+                <img src="./images/profile.jpg" alt="my photo" class="profile-img">
+                <h2>Xia Haoyang</h2>
+                <p>Email: <a href="mailto:keraxia@qq.com">keraxia@qq.com</a></p>
+                <table class="education">
+                    <tr>
+                        <td style="text-align: left;"><strong>2020.9-2024.7</strong></td>
+                        <td style="text-align: right;"><strong>Communication University of China, Beijing</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">B.A.</td>
+                        <td style="text-align: right;">Data Journalism</td>
+                    </tr>
+                </table>
+                <hr style="width:85%; border-color:#e3e3e3dc;border-width: 1px;">
+                <table class="education">
+                    <tr>
+                        <td style="text-align: left;"><strong>2024.9-<br>2026.7</strong></td>
+                        <td style="text-align: right;"><strong>Fudan University, <br>Shanghai</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">MJC</td>
+                        <td style="text-align: right;">New Media Communication</td>
+                    </tr>
+                </table>
+                <ul class="weblist">
+                    <li class="listname">Data journalism projects</li>
+                    <li class="listname">Dataviz & Infographics</li>
+                    <li class="listname">Study Notes</li>
+                </ul>
+                <p>Some bgm if u want🎵</p>
+                <audio src="./audio/audio.mp3" controls></audio> 
+                <div class="ending">  
+                    <p style="text-align: center;">&copy; Keraxia·2024</p>  
+                </div> 
+            </div>
+        </div>
+        <div class="project-container">
+            <div class="projects">
+                <div class="project" style="margin-top: 50px;">
+                    <div class="left-box">
+                        <a href="https://html-phone-double-1308294677.cos.ap-beijing.myqcloud.com/index.html"><img class="project-img" src="./images/project1.png"  alt="project1-cover" title="点击跳转作品"></a>
+                    </div>
+                    <div class="right-box">
+                        <a href="https://html-phone-double-1308294677.cos.ap-beijing.myqcloud.com/index.html">
+                        <p class="project-name">欢迎解锁你的中国奇遇——一份中国游指南</p>
+                        <p class="project-name-en">Welcome to Unlock the Wonders of China: A China Travel Guide</p>
+                        </a>
+                        <p class="infos">在入境旅游不断升温的背景下，作品综合二十余万条数据，试图呈现海外民众对来华旅游的浓厚兴趣及中国为恢复入境游所做的种种努力，并为潜在消费者提供切实的旅行指导与旅游建议，以此增进海外民众对我国的了解，传播“美好中国”的文旅魅力。</p>
+                        <span class="tag">中国传媒大学新闻学院2024届本科毕业生优秀作品</span>
+                        <span class="tag">2024中国数据内容年度案例征集活动Shortlist</span>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="left-box">
+                        <a href="https://older-job-seekers-1308294677.cos.ap-beijing.myqcloud.com/index.html"><img class="project-img" src="./images/project2.png" alt="project2-cover" title="点击跳转作品"></a>
+                    </div>
+                    <div class="right-box">
+                        <a href="https://older-job-seekers-1308294677.cos.ap-beijing.myqcloud.com/index.html">
+                        <p class="project-name">大龄打工人的下半场人生：难以叩开的求职之门</p>
+                        <p class="project-name-en">The second half of life for older job-seekers: the hard-to-knock door</p>
+                        </a>
+                        <p class="infos">作品通过综合宏观统计数据、网站招聘数据与线下访谈资料，试图呈现出大龄就业市场的普遍特点，还原身处年龄高压线之下的大龄群体所面对的求职困境与工作境遇，并系统梳理了国内外的相关政策，为解决现存问题提供了一定的参考。</p>
+                        <span class="tag">全国大学生网络编辑创新大赛一等奖</span>
+                        <span class="tag">中国数据新闻大赛二等奖</span>
+                        <span class="tag">2023中国数据内容年度案例征集活动年度案例</span>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="left-box">
+                        <a href="https://readymag.website/u592388364/211QZ/"><img class="project-img" src="./images/project3.png" alt="project3-cover" title="点击跳转作品"></a>
+                    </div>
+                    <div class="right-box">
+                        <a href="https://readymag.website/u592388364/211QZ/">
+                        <p class="project-name">生的焦虑与希望：试管闯关之路上的女人</p>
+                        <p class="project-name-en">Anxiety and Hope: Those Women undergoing IVF treatments</p>
+                        </a>
+                        <p class="infos">本作品通过数据与访谈资料，讲述了试管周期内妈妈们的真实身心经历，以及求子群体间守望相助的故事，意在刻画出一条充满焦虑与希望的求「生」之路，并展现其中所蕴含的女性力量。</p>
+                        <span class="tag">2022中国数据内容年度案例征集Longlist</span>
+                        <span class="tag">入围2022中国数据新闻大赛复赛</span>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="left-box">
+                        <a href="https://readymag.website/u592388364/BlackSoil/">
+                            <video class="project-video" alt="project4-cover" title="点击跳转作品" loop=“loop” autoplay="autoplay" muted=“true”>  
+                                <source src="./video/project4.mp4" type="video/mp4">  
+                            </video>
+                        </a>
+                    </div>
+                    <div class="right-box">
+                        <a href="https://readymag.website/u592388364/BlackSoil/">
+                        <p class="project-name">守护“耕地中的大熊猫”——保护黑土地，中国在行动</p>
+                        <p class="project-name-en">Protecting the “Giant Pandas in Cultivated Land”, China is Taking Action</p>
+                        </a>
+                        <p class="infos">近年来，我国高度重视粮食安全问题。作品以《黑土地保护法》颁布实施为契机，向公众系统科普了黑土地相关知识。通过聚合国家统计数据、最新科研成果及各国耕地保护政策，梳理了我国黑土地保护的挑战、行动与对策，提供了有力的政策依据和行动参考。</p>
+                        <span class="tag">入围2022中国数据新闻大赛复赛</span>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="left-box">
+                        <a href="https://mp.weixin.qq.com/s/kegF5KiA0gzMlRcYv-CJvg"><img class="project-img" src="./images/project5.jpg" alt="project5-cover" title="点击跳转作品"></a>
+                    </div>
+                    <div class="right-box">
+                        <a href="https://mp.weixin.qq.com/s/kegF5KiA0gzMlRcYv-CJvg">
+                        <p class="project-name">深扒5年九所高校借阅榜，名校学霸爱看什么书？</p>
+                        <p class="project-name-en">What Do Students at Prestigious Universities Love to Read?</p>
+                        </a>
+                        <span class="tag">澎湃实习作品，在2023年世界读书日当天获得澎湃网站、APP首页推荐</span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    <div> 
+</body>
+</html>
