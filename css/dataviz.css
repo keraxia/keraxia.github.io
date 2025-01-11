@@ -1,10 +1,7 @@
-body{
+body {
     background-color: #fdf4ff;
     margin: 0;
     overflow: hidden;
-}
-body{
-    background-color: #fdf4ff;
 }
 .container{
     display: flex;
@@ -233,4 +230,177 @@ h1{
 @font-face {
     font-family: 'wending';
     src: url('../fonts/gbsn00lp-2.ttf') format('truetype')
+}
+/* 添加移动端适配 */
+@media screen and (max-width: 768px) {
+    /* 容器布局调整 */
+    body {
+        overflow-y: auto;  /* 允许页面滚动 */
+    }
+    .container {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+        width:100vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .project-container{
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* 个人信息栏调整 */
+    .profile-container {
+        width: 100%;
+        height: auto;
+        margin:0 auto;
+        overflow-y: visible;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .profile {
+        padding: 20px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* 瀑布流布局调整 */
+    .masonry {
+        column-count: 2;  /* 改为单列 */
+        column-gap: 15px;
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .item {
+        break-inside: avoid;
+        margin-bottom: 15px;
+    }
+    
+    .image-wrapper {
+        position: static;  /* 改为静态定位 */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .overlay {
+        position: static;  /* 改为静态定位 */
+        opacity: 1;  /* 始终显示 */
+        background-color: white;
+        margin: 0px;
+        height: auto;
+        text-align:left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 40px;
+    }
+    
+    /* 移除悬停效果 */
+    .image-wrapper:hover .overlay {
+        opacity: 1;
+    }
+    
+    .image-wrapper:hover img {
+        transform: none;  /* 移除图片放大效果 */
+    }
+    
+    /* 调整文字样式 */
+    .overlay-text {
+        width:95%;
+        font-size: 14px;
+        margin: 10px auto;
+        padding: 0;
+        text-align:left;
+    }
+    
+    .other-infos {
+        display: none;
+        font-size: 13px;
+        width: 100% !important;
+        margin-top: 0;
+        line-height: 1.5;
+        text-align:left;
+    }
+    
+    /* 导航菜单调整 */
+    .weblist {
+        padding: 14px;
+    }
+    
+    .listname {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+    
+    body {
+        overflow-y: auto;  /* 允许页面滚动 */
+    }
+}
+
+/* 小屏手机适配 */
+@media screen and (max-width: 480px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .overlay-text {
+        font-size: 14px;
+    }
+    
+    .other-infos {
+        font-size: 12px;
+    }
+}
+
+/* 桌面端布局 */
+@media screen and (min-width: 769px) {
+    .container {
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .profile-container {
+        height: 100vh;
+    }
+    
+    .project-container {
+        height: 100vh;
+    }
+    
+    .masonry {
+        column-count: 3;  /* 桌面端保持两列布局 */
+    }
+    
+    body {
+        overflow: hidden;  /* 桌面端保持原有的hidden设置 */
+    }
+    
+    .image-wrapper {
+        position: relative;
+    }
+    
+    .overlay {
+        position: absolute;
+        opacity: 0;
+    }
+    
+    .image-wrapper:hover .overlay {
+        opacity: 1;
+    }
+    
+    .image-wrapper:hover img {
+        transform: scale(1.05);
+    }
 }

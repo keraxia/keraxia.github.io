@@ -24,7 +24,7 @@ body{
 }
 .project-container{
     flex: 3;
-    overflow-y: scroll;
+    overflow-y: auto;
     display: flex;
     justify-content: center; 
 }
@@ -156,4 +156,149 @@ h1{
 @font-face {
     font-family: 'wending';
     src: url('../fonts/gbsn00lp-2.ttf') format('truetype')
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    /* 容器布局调整 */
+    .container {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+        width:100vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* 个人信息栏调整 */
+    .profile-container {
+        width: 100%;
+        height: auto;
+        margin:0 auto;
+        overflow-y: visible;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .profile {
+        padding: 20px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* 项目展示区调整 */
+    .project-container {
+        width: 95%;
+        overflow-y: visible;
+        height: auto;
+    }
+    
+    .projects {
+        padding: 10px;
+        width: 100%;
+    }
+    
+    /* 项目卡片调整 */
+    .project {
+        flex-direction: column;
+        margin-bottom: 30px;
+        width:100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .left-box {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .right-box {
+        width: 90%;
+        margin:0 auto 20px auto;
+    }
+    
+    /* 文字大小调整 */
+    .project-name {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    
+    .project-name-en {
+        font-size: 14px;
+    }
+    
+    .infos {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* 标签样式调整 */
+    .tag, .tag2 {
+        font-size: 12px;
+        margin: 3px;
+        padding: 1px 10px;
+        white-space: nowrap;
+        line-height:2;
+    }
+    
+    /* 导航菜单调整 */
+    .weblist {
+        padding: 14px;
+    }
+    
+    .listname {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+
+/* 小屏手机适配 */
+@media screen and (max-width: 480px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .project-name {
+        font-size: 16px;
+    }
+    
+    .project-name-en {
+        font-size: 13px;
+    }
+    
+    .infos {
+        font-size: 13px;
+    }
+    
+    .tag, .tag2 {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+    
+    .education {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    /* 桌面端保持原有布局 */
+    .container {
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .profile-container {
+        height: 100vh;
+    }
+    
+    .project-container {
+        height: 100vh;
+    }
 }
